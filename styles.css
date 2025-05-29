@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Courier Prime', monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  background-color: rgb(230, 224, 218);
+  font-size: 2em;
+  box-shadow: 1px 1px 1px 1px rgb(173, 168, 164);
+}
+
+main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+  color: black;
+  overflow: hidden; /* ensures background doesn't overflow */
+  z-index: 0;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('atteli/main-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(75%) opacity(0.5);
+  z-index: -1;
+}
+
+.content
+{
+    background-color: rgb(230, 224, 218);
+    box-shadow: 1px 1px 1px 1px rgb(173, 168, 164);
+    padding: 0 0.5em;
+    padding-bottom: 1em;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+.chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.chapter-links a
+{
+    font-size: 1.25em;
+    color: black;
+    padding: 0 5px;
+}
+
+.chapter-links a:hover
+{
+  opacity: 0.5;
+}
