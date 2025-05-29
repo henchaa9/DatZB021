@@ -104,3 +104,12 @@ main::before {
 {
   opacity: 0.5;
 }
+
+@media (max-width: 768px)
+{
+    .theme-btn
+  {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
